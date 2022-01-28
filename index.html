@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de IMC</title>
+    <script>
+        function soma(){
+            var num1 = parseInt(document.getElementById("n1").value);
+            var num2 = parseInt(document.getElementById("n2").value);
+            var res = document.getElementById("res");
+            res.innerHTML= "Resultado é: " + (num1+num2);
+            }
+    </script>
+</head>
+<body>
+    Digite um número 1 <br>
+    <input id="n1"><br>
+    Digite um número 2 <br>
+    <input id="n2"><br>
+    <button onclick="soma()">Somar</button>
+    <div id="res"></div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Cálculo de IMC</title>
@@ -11,30 +11,54 @@
 </head>
 <body>
 <form>
-    <h2>
-        Vamos calcular o seu IMC?
-    </h2>
+    <div class="d-flex justify-content-center">
+        <div class="card">
+            <div class="card-body">
+                <div align="center">
+                    <h2><span class="badge badge-secondary">Vamos calcular o seu IMC?</span></h2>
+                </div>
+                <!-- Altura -->
+                <div class="form-group row">
+                        <label class="col-sm-10 col-form-label">Digite sua Altura:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" required type="number" id="altura" placeholder="Exemplo: 1,65">
+                                    <small id="AlturaHelpBlock" class="form-text text-muted">
+                                    Inserir com ',' (Vírgula), não com ponto '.'.
+                                    </small>
+                            </div>
 
-    <div class="input">
-        <label>Digite sua Altura</label>
-        <input required type="number" id="altura">
-        <span class="error"></span><br>
-    </div>
+                </div>
+                <!-- Peso -->
+                <div class="form-group row">
+                    <label class="col-sm-10 col-form-label">Digite o seu Peso:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control"  required type="number" id="peso" placeholder="Exemplo: 50">
+                            <small id="PesoHelpBlock" class="form-text text-muted">
+                                Não precisa inserir a unidade de Medida.
+                            </small>
+                        </div>
+                </div>
+                <div align="center">
+                    <!-- Calcular -->
 
-    <div class="input"><br>
-        <label>Digite o seu Peso</label>
-        <input required type="number" id="peso">
-        <span class="error"></span><br>
-    </div>
+                    <button id="calcular" type="button" class="btn btn-success">Calcular o IMC</button>
+                     <button id="buttonreset" type="reset" class="btn btn-primary">Preencher novamente</button>
+                    <br>
 
+                    <!-- Resultado do IMC -->
+                    <h2><span class="badge badge-light" id="res"></span></h2><BR>
 
-<br>
+                </div>
+                    <!-- Descrição -->
+                <div align="center">
+                        <strong></strong><h5 id="abstract"></h5>
+                        <i><h6 id="description"></h6></i>
 
-    <button id="calcular">Calcular o IMC</button>
-
-
-    <div class="result" id="res"></div>
-
+                    </div>
+                    <h2><span class="badge badge-light" ></span></h2>
+                </div>
+            </div>
+        </div>
 </form>
 <script src="./calculoImc.js"></script>
 
